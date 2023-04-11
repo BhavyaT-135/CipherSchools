@@ -7,6 +7,7 @@ const dotenv = require('dotenv')
 
 // Routes
 const authRouter = require('./routes/auth')
+const followerRouter = require('./routes/followers')
 
 // Middleware
 const notFoundMiddleware = require('./middleware/not-found');
@@ -22,6 +23,7 @@ app.get('/', (req, res) => {
 })
 
 app.use('/api/v1/auth', authRouter)
+app.use('/api/v1/users', followerRouter)
 
 // Using the middleware
 app.use(notFoundMiddleware);
