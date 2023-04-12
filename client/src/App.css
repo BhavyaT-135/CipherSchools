@@ -19,14 +19,5 @@ text {
 }
 
 .cipher__app {
-  display: flex;
-  flex-direction: column;
-}
-
-.cipher__app-content {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
+  position: absolute;
 }

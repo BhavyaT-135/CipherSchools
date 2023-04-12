@@ -8,6 +8,7 @@
   border-bottom: 1px solid #e0e0e0;
   display: flex;
   flex-direction: row;
+  z-index: 999;
 
   /* ff 3.6+ */
   background: -moz-linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(215, 217, 222, 1) 25%, rgba(215, 217, 222, 1) 50%, rgba(215, 217, 222, 1) 75%, rgba(255, 255, 255, 1) 100%);

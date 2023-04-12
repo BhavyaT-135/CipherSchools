@@ -4,16 +4,16 @@ import Sidebar from './components/Sidebar/Sidebar'
 import Content from './components/Content/Content'
 import ProfileHeader from './components/ProfileHeader/ProfileHeader'
 import './App.css'
+import RightSidebar from './components/RightSidebar/RightSidebar'
 
 const App = () => {
   return (
     <div className='cipher__app'>
       <Header />
+      <Sidebar />
+      <RightSidebar />
       <ProfileHeader />
-      <div className='cipher__app-content'>
-        <Sidebar />
-        <Content />
-      </div>
+      <Content />
     </div>
   )
 }
