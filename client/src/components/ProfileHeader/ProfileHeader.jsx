@@ -1,8 +1,16 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import './profileHeader.css'
 import pf from '../../assets/pf.jpeg'
+import { UserContext } from '../../Context/UserContext'
 
 const ProfileHeader = () => {
+
+  const { user } = useContext(UserContext)
+  let followersLength = ""
+  if (user.followers) {
+    followersLength = user.followers.length
+  }
+
   return (
     <div className='cipher__profileheader'>
       <div className='cipher__profileheader-left'>
@@ -12,13 +20,13 @@ const ProfileHeader = () => {
         </div>
         <div className='cipher__profileheader_namecontent'>
           <div className='cipher__profileheader_namecontent-subheading'>Hello,</div>
-          <div className='cipher__profileheader_namecontent-heading'>Bhavya Tewari</div>
-          <div className='cipher__profileheader_namecontent-email'>bhavyatewari.13.5@gmail.com</div>
+          <div className='cipher__profileheader_namecontent-heading'>{user.username}</div>
+          <div className='cipher__profileheader_namecontent-email'>{user.email}</div>
         </div>
       </div>
       <div className='cipher__profileheader-right'>
         <div className='cipher__profileheader_followers'>
-          0 Followers
+          {followersLength} Followers
         </div>
       </div>
     </div>

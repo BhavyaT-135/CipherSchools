@@ -94,6 +94,7 @@
   font-size: 20px;
   color: #2C3D4F;
   font-weight: 500;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 1000px) {

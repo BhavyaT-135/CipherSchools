@@ -7,6 +7,7 @@ import './App.css'
 import RightSidebar from './components/RightSidebar/RightSidebar'
 
 const App = () => {
+
   return (
     <div className='cipher__app'>
       <Header />
