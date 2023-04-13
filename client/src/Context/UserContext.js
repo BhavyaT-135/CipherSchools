@@ -7,7 +7,7 @@ export const UserContextProvider = ({ children }) => {
   const [user, setUser] = useState({});
 
   useEffect(() => {
-    axios.post('http://localhost:5000/api/v1/auth/login', { email: 'bhavyat@gmail.com', password: '12345678' })
+    axios.post('http://localhost:5000/api/v1/auth/login', { email: 'bhavya@gmail.com', password: '12345678' })
       .then(res => {
         setUser(res.data.user)
       })
