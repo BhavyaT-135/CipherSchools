@@ -3,6 +3,7 @@ import './profileHeader.css'
 import pf from '../../assets/pf.jpeg'
 import { UserContext } from '../../Context/UserContext'
 import MyModal from '../MyModal/MyModal'
+import FollowersModal from '../FollowersModal/FollowersModal'
 
 const ProfileHeader = () => {
 
@@ -14,8 +15,14 @@ const ProfileHeader = () => {
 
   const [modalToggle, setModalToggle] = useState(false)
 
+  const [followersToggle, setFollowersToggle] = useState(false)
+
   const handleModal = () => {
     setModalToggle(!modalToggle)
+  }
+
+  const handleFollowersModal = () => {
+    setFollowersToggle(!modalToggle)
   }
 
   return (
@@ -33,13 +40,16 @@ const ProfileHeader = () => {
           </div>
         </div>
         <div className='cipher__profileheader-right'>
-          <div className='cipher__profileheader_followers'>
+          <div className='cipher__profileheader_followers' onClick = {handleFollowersModal}>
             {followersLength} Followers
           </div>
         </div>
       </div>
       {modalToggle && 
         <MyModal modalToggle={modalToggle} setModalToggle={setModalToggle} />
+      }
+      {followersToggle &&
+        <FollowersModal followersToggle={followersToggle} setFollowersToggle={setFollowersToggle} />
       }
     </>
   )
